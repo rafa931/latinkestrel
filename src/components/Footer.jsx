@@ -1,35 +1,26 @@
 import { FaInstagram, FaFacebook, FaTiktok, FaSpotify } from "react-icons/fa";
-
+import SocialMedia from "./SocialMedia";
+import { useLanguage } from "./LanguageContext";
 
 function Footer() {
+  const { lang } = useLanguage();
+  const footerText = {
+    title: {
+      'en': '© 2025 Latin Kestrel Production LLC. All rights reserved.',
+      'es': '© 2025 Latin Kestrel Production LLC. Todos los derechos reservados.'
+    },
+    follow: {
+      'en': 'Follow us on social media!',
+      'es': '¡Síguenos en las redes sociales!'
+    }
+  };
+
   return (
     <footer className="footer mt-20 mb-4 p-6  text-white text-center">
-      <p>© 2025 My Project. All rights reserved.</p>
-      <p>Follow us on social media!</p>
+      <p>{footerText.title[lang]}</p>
+      <p>{footerText.follow[lang]}</p>
       <div>
-        <ul className="flex justify-center space-x-6 mt-2">
-          <li>
-            <a href="">
-              <FaInstagram className="text-2xl text-[#E1306C]" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <FaFacebook className="text-2xl text-[#1877F2]" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <FaTiktok className="text-2xl text-[#69C9D0]" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <FaSpotify className="text-2xl text-[#1DB954]" />
-            </a>
-          </li>
-
-        </ul>
+        <SocialMedia />
       </div>
     </footer>
   );

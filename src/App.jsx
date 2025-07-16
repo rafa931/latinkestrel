@@ -7,20 +7,24 @@ import Hero from './components/Hero'
 import SocialMedia from './components/SocialMedia'
 import About from './components/About'
 import Footer from './components/Footer'
+import SocialMediaPosts from './components/SocialMediaPosts'
+import SocialMediaComp from './components/SocialMediaComp'
+import { LanguageProvider } from './components/LanguageContext'
+import { useLanguage } from './components/LanguageContext';
 
 function App() {
-
+ 
   return (
-    <>
+    <LanguageProvider>
       <Navbar/>
       <Hero/>
-      <div className="mt-10">
-        <h2 className="text-2xl sm:text- font-bold text-center">Follow us on social media</h2>
-      </div>
-      <SocialMedia/>
+      <SocialMediaComp>
+        <SocialMedia/>  
+      </SocialMediaComp>
+      <SocialMediaPosts/>
       <About/>
       <Footer/>
-    </>
+    </LanguageProvider>
   )
 }
 
