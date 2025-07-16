@@ -6,7 +6,7 @@ import photo from '../assets/artist.webp';
 function Hero() {
   return (
     <>
-      <div className="hero-container flex flex-col justify-center mt-10">
+      <div id="home" me="hero-container flex flex-col justify-center mt-10">
         <h1 className='text-center text-3xl font-bold'>Latin Kestrel</h1>
         <p className='text-justify md:text-center text-lg mt-4'>
           New artists blending Latin rhythms with modern sounds.<br />

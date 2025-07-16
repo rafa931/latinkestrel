@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaTiktok, FaSpotify } from "react-icons/fa";
 function SocialMedia() {
   return (
     <>
-        <div> 
+        <div id="social-media"> 
           <ul className="flex justify-center space-x-6 mt-4">
             <li>
               <a href="">

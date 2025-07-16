@@ -1,7 +1,7 @@
 function About() {
   return (
     <>
-      <div>
+      <div id="about">
         <h1 className="text-3xl font-bold text-center mt-10">About Latin Kestrel</h1>
         <p className="mt-6 text-lg text-justify max-w-2xl mx-auto">
           Latin Kestrel is a 29-year-old singer originally from Cuba, now making his mark in Miami, USA.

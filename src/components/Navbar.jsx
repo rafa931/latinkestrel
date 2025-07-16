@@ -18,17 +18,17 @@ function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors">
+            <a href="#home" className="text-white hover:text-blue-200 transition-colors">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors">
+            <a href="#music" className="text-white hover:text-blue-200 transition-colors">
               Music
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors">
+            <a href="#about" className="text-white hover:text-blue-200 transition-colors">
               About
             </a>
           </li>
@@ -90,7 +90,7 @@ function Navbar() {
 
         <div className="fixed bottom-0 left-0 w-full bg-black p-4"> 
           <SocialMedia />
-
+        W
         </div>
 
       </div>
