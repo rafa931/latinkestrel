@@ -8,7 +8,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="nav-bar p-4 m-auto bg-black">
+    <nav className="nav-bar fixed top-0 left-0 w-full z-50 p-4 m-auto bg-black">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-xl font-bold flex items-center">
           <img src={logo} alt="Logo" className="inline-block w-12 h-12 rounded-full" />
@@ -61,7 +61,7 @@ function Navbar() {
         <ul className="flex flex-col items-center space-y-8 mt-10">
           <li>
             <a
-              href="#"
+              href="#home"
               className="text-white text-xl hover:text-blue-200 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
@@ -70,7 +70,7 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#music"
               className="text-white text-xl hover:text-blue-200 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
@@ -79,7 +79,7 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#about"
               className="text-white text-xl hover:text-blue-200 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
