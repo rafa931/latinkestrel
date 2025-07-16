@@ -1,0 +1,8 @@
+.nav-bar {
+  background-color: #080808;
+  color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
