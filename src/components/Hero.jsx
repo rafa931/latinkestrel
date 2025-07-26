@@ -9,8 +9,8 @@ function Hero() {
 
   const heroText = {
     text: {
-      'en': 'New artists blending Latin rhythms with modern sounds. Experience the latest album and join the musical journey!',
-      'es': 'Nuevos artistas que mezclan ritmos latinos con sonidos modernos. ¡Experimenta el último álbum y únete a la aventura musical!'
+      'en': 'Experience the latest album and join the musical journey!',
+      'es': '¡Experimenta el último álbum y únete a la aventura musical!'
     },
     title: {
       'en': 'Latin Kestrel',
