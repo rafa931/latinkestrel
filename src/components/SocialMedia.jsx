@@ -5,7 +5,7 @@ function SocialMedia() {
     'instagram': 'https://www.instagram.com/latin_kestrel?igsh=MTRnaTdsYzNiNWJibw==',
     'facebook': 'https://www.facebook.com/share/18y1qQowRB/?mibextid=wwXIfr',
     'tiktok': 'https://www.tiktok.com/@latin.kestrel?_t=ZP-8yBk9VbFJN9&_r=1',
-    'spotify': 'https://open.spotify.com/artist/6b1a2d5c3f4e8c9b0f7e8c?si=1234567890abcdef',
+    'spotify': 'https://open.spotify.com/track/14O9wOfEZ47PbY4IAWJ09f?si=K-8bYdOrRJmwxTudASzvJQ&context=spotify%3Atrack%3A14O9wOfEZ47PbY4IAWJ09f',
     'youtube': 'https://youtube.com/@latinkestrel?si=kPHMwThM4EogsN1U'
   }
 
@@ -29,7 +29,7 @@ function SocialMedia() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href={socialLinks.spotify}>
                 <FaSpotify className="text-2xl text-[#1DB954]" />
               </a>
             </li>

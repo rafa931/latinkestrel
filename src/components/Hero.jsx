@@ -22,6 +22,10 @@ function Hero() {
     }
   }
 
+  const spotify = {
+    spotify: "https://open.spotify.com/track/14O9wOfEZ47PbY4IAWJ09f?si=K-8bYdOrRJmwxTudASzvJQ&context=spotify%3Atrack%3A14O9wOfEZ47PbY4IAWJ09f"
+  }
+
 
   return (
     <section
@@ -47,7 +51,7 @@ function Hero() {
           <div className='flex-1 flex justify-center items-center'>
 
             <div className="mt-4 flex  sm:flex sm:flex-col sm:justify-center sm:items-center">
-              <a href='#' className='flex flex-col items-center text-white '>
+              <a href={spotify.spotify} className='flex flex-col items-center text-white '>
                 <FaSpotify className='w-25 h-25 md:w-50 md:h-50 text-[#1DB954]' />
                 <span className="mt-1  text-[#1DB954]">{heroText.listen[lang]}</span>
               </a>

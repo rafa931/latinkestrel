@@ -47,7 +47,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#music" className="text-white hover:text-blue-200 transition-colors">
+            <a href="https://open.spotify.com/track/14O9wOfEZ47PbY4IAWJ09f?si=K-8bYdOrRJmwxTudASzvJQ&context=spotify%3Atrack%3A14O9wOfEZ47PbY4IAWJ09f" className="text-white hover:text-blue-200 transition-colors">
               {navBarText.music[lang]}
             </a>
           </li>
@@ -109,7 +109,7 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#music"
+              href="https://open.spotify.com/track/14O9wOfEZ47PbY4IAWJ09f?si=K-8bYdOrRJmwxTudASzvJQ&context=spotify%3Atrack%3A14O9wOfEZ47PbY4IAWJ09f"
               className="text-white text-xl hover:text-blue-200 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
