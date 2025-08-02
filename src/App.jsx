@@ -9,21 +9,24 @@ import About from './components/About'
 import Footer from './components/Footer'
 import SocialMediaPosts from './components/SocialMediaPosts'
 import SocialMediaComp from './components/SocialMediaComp'
+import SocialMediaMusic from './components/SocialMediaMusic'
 import { LanguageProvider } from './components/LanguageContext'
 import { useLanguage } from './components/LanguageContext';
 
+
 function App() {
- 
+
   return (
     <LanguageProvider>
-      <Navbar/>
-      <Hero/>
-      <SocialMediaComp>
-        <SocialMedia/>  
-      </SocialMediaComp>
-      <SocialMediaPosts/>
-      <About/>
-      <Footer/>
+      <Navbar />
+      <Hero>
+        <SocialMediaComp>
+          <SocialMedia />
+        </SocialMediaComp>
+        <SocialMediaMusic/>
+      </Hero>
+      <About />
+      <Footer />
     </LanguageProvider>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo.JPG';
+import logo from '../assets/artist.webp';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { FaInstagram, FaFacebook, FaTiktok, FaSpotify, } from "react-icons/fa";
 import SocialMedia from './SocialMedia';
@@ -13,7 +13,9 @@ function Navbar() {
     home: { 'en': 'Home', 'es': 'Inicio' },
     music: { 'en': 'Music', 'es': 'Música' },
     about: { 'en': 'About', 'es': 'Acerca de' },
-    language: { 'en': 'EN', 'es': 'ES' }
+    language: { 'en': 'EN', 'es': 'ES' },
+    contact: { 'en': 'Contact', 'es': 'Contacto' },
+    mail: 'productionslatinkestrel@gmail.com'
   }
 
 
@@ -126,8 +128,18 @@ function Navbar() {
             </a>
           </li>
         </ul>
+        
+        
 
         <div className="fixed bottom-0 left-0 w-full bg-black p-4">
+          <div>
+            <p className="text-white">
+              {navBarText.contact[lang]} <span style={{color:'blue', fontSize: '14px'}}>{navBarText.mail}</span>
+            </p>
+
+          </div>
+        
+          
           <SocialMedia />
         </div>
 

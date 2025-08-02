@@ -12,13 +12,18 @@ function Footer() {
     follow: {
       'en': 'Follow us on social media!',
       'es': '¡Síguenos en las redes sociales!'
-    }
+    },
+    email: {
+      'en': 'Contact us at:',
+      'es': 'Contáctanos en:'
+    },
+    mail: 'productionslatinkestrel@gmail.com'
   };
 
   return (
     <footer className="footer mt-20 mb-4 p-6  text-white text-center">
       <p>{footerText.title[lang]}</p>
-      <p>{footerText.follow[lang]}</p>
+      <p>{footerText.email[lang]} <span style={{color:'blue'}}>{footerText.mail}</span></p>
       <div>
         <SocialMedia />
       </div>

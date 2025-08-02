@@ -1,10 +1,13 @@
 import { FaSpotify } from 'react-icons/fa';
 import photo from '../assets/artist.webp';
 import { useLanguage } from './LanguageContext';
-import logo from '../assets/logo.JPG'; 
+import logo from '../assets/logo-2.webp'; 
+import logo2 from '../assets/logo.JPG';
+
+import SocialMediaComp from './SocialMediaComp';
 
 
-function Hero() {
+function Hero({children}) {
   const { lang } = useLanguage();
 
   const heroText = {
@@ -28,47 +31,30 @@ function Hero() {
 
 
   return (
-    <section
-    className='mt-28 rounded-lg'
+    <section id="home"
+    className='mt-22 rounded-lg'
       style={{
         backgroundImage: `
-          linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(34,34,34,0.9) 80%, #222 100%),
+          linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(34,34,34,0.6) 80%, #222 100%),
           url(${logo})
         `,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
       }}
     >
-      <div id="home" className="hero-container flex flex-col justify-center ">
-        <h1 className='text-center text-3xl font-bold'>{heroText.title[lang]}</h1>
-        <p className='text-justify md:text-center text-lg mt-4'>
+      <div  className="hero-container flex flex-col justify-center ">
+        <div className='flex justify-center items-center gap-4'>
+          <img src={logo2} alt="Logo" className="inline-block w-13 h-13 md:w-15 md:h-15 rounded-full ml-2 mt-1" />        
+          <h1 className='text-center text-3xl font-bold flex-1/2 mr-16'>{heroText.title[lang]}</h1>
+        </div>
+        
+        <p className='text-justify md:text-center text-lg mt-4 mb-49'>
           {heroText.text[lang]}
         </p>
 
-        <div className="mt-10 flex flex-row-reverse md:flex-row justify-center">
-
-          <div className='flex-1 flex justify-center items-center'>
-
-            <div className="mt-4 flex  sm:flex sm:flex-col sm:justify-center sm:items-center">
-              <a href={spotify.spotify} className='flex flex-col items-center text-white '>
-                <FaSpotify className='w-25 h-25 md:w-50 md:h-50 text-[#1DB954]' />
-                <span className="mt-1  text-[#1DB954]">{heroText.listen[lang]}</span>
-              </a>
-              
-            </div>
-
-          </div>
-
-          <div className='flex-1 justify-center flex'>
-            <img
-              src={photo}
-              alt="Artist"
-              className='w-34 h-34 md:w-64 md:h-64 object-cover rounded-full shadow-lg'
-            />
-          </div>
-
-        </div>
+        {children}
       </div>
     </section>
   );
