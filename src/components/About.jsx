@@ -27,7 +27,7 @@ function About() {
 
   return (
     <>
-      <div id="about">
+      <div id="about" className='mt-22'>
         <h1 className="text-3xl font-bold text-center mt-10">{aboutText.title[lang]}</h1>
         <p className="mt-6 text-lg text-justify max-w-2xl mx-auto">
          {aboutText.content[lang]}

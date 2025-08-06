@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -14,19 +15,30 @@ import { LanguageProvider } from './components/LanguageContext'
 import { useLanguage } from './components/LanguageContext';
 
 
+function Home() {
+  return (
+    <Hero>
+      <SocialMediaComp>
+        <SocialMedia />
+      </SocialMediaComp>
+      <SocialMediaMusic />
+    </Hero>
+  )
+}
+
+
 function App() {
 
   return (
     <LanguageProvider>
-      <Navbar />
-      <Hero>
-        <SocialMediaComp>
-          <SocialMedia />
-        </SocialMediaComp>
-        <SocialMediaMusic/>
-      </Hero>
-      <About />
-      <Footer />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} /> 
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </Router>
     </LanguageProvider>
   )
 }

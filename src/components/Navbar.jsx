@@ -5,6 +5,7 @@ import { FaInstagram, FaFacebook, FaTiktok, FaSpotify, } from "react-icons/fa";
 import SocialMedia from './SocialMedia';
 import { useLanguage } from './LanguageContext';
 import ReactCountryFlag from "react-country-flag";
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,9 +45,9 @@ function Navbar() {
           </li>
 
           <li>
-            <a href="#home" className="text-white hover:text-blue-200 transition-colors">
+            <Link to="/" className="text-white hover:text-blue-200 transition-colors">
               {navBarText.home[lang]}
-            </a>
+            </Link>
           </li>
           <li>
             <a href="https://open.spotify.com/track/14O9wOfEZ47PbY4IAWJ09f?si=K-8bYdOrRJmwxTudASzvJQ&context=spotify%3Atrack%3A14O9wOfEZ47PbY4IAWJ09f" className="text-white hover:text-blue-200 transition-colors">
@@ -54,9 +55,9 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#about" className="text-white hover:text-blue-200 transition-colors">
+            <Link to="/about" className="text-white hover:text-blue-200 transition-colors">
               {navBarText.about[lang]}
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -101,13 +102,13 @@ function Navbar() {
         </div>
         <ul className="flex flex-col items-center space-y-8 mt-10">
           <li>
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="text-white text-xl hover:text-blue-200 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {navBarText.home[lang]}
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -119,13 +120,13 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="text-white text-xl hover:text-blue-200 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {navBarText.about[lang]}
-            </a>
+            </Link>
           </li>
         </ul>
         
